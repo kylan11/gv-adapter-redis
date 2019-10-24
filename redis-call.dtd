@@ -1,0 +1,50 @@
+<!ELEMENT redis-call (Description?,(set?, get?, delete?, keys?))>
+
+<!-- fixed parameter with value "call" -->
+<!ATTLIST redis-call type CDATA #FIXED "call">
+
+<!-- the name of the operation -->
+<!ATTLIST redis-call name CDATA #REQUIRED>
+
+<!--
+	  Redis DBO
+	  #Label: @name
+-->
+<!ELEMENT set EMPTY>
+
+<!-- DBO name -->
+<!ATTLIST set name CDATA #REQUIRED>
+<!-- DBO name -->
+<!ATTLIST set key CDATA #REQUIRED>
+<!-- value of the key to set -->
+<!ATTLIST set value CDATA #REQUIRED>
+
+<!--
+	  Redis DBO
+	  #Label: @name
+-->
+<!ELEMENT get EMPTY>
+<!-- DBO name -->
+<!ATTLIST get name CDATA #REQUIRED>
+<!-- name of the key to get -->
+<!ATTLIST get key CDATA #REQUIRED>
+
+<!--
+	  Redis DBO
+	  #Label: @name
+-->
+<!ELEMENT delete EMPTY>
+<!-- name of the key to delete -->
+<!ATTLIST delete key CDATA #REQUIRED>
+<!-- DBO name -->
+<!ATTLIST delete name CDATA #REQUIRED>
+
+<!--
+	  Redis DBO
+	  #Label: @name
+-->
+<!ELEMENT keys EMPTY>
+<!-- regular expression pattern to query -->
+<!ATTLIST keys expression CDATA #REQUIRED>
+<!-- DBO name -->
+<!ATTLIST keys name CDATA #REQUIRED>
