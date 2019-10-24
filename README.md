@@ -140,4 +140,3 @@ When we're done defining our System node, we can now use it in a Service-Operati
 You can test these Services selecting them in the Execute section of the GreenVulcano dashboard.
 
 #### WARNING: This GreenVulcano extension is currently in Alpha stage and its features are still limited and mostly untested. Feel free to report any bugs!
-# gv-adapter-redis
